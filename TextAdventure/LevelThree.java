@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class LevelThree {
@@ -13,9 +12,19 @@ public class LevelThree {
       "Quale delle seguenti non è un vantaggio del polimorfismo?",
       "Il polimorfismo può essere utilizzato solo in linguaggi di programmazione orientati agli oggetti?"
   };
-  String[] intermedio = { "Vero o Falso", "Vero 2 o Falso 2", "Vero 3 o Falso 3", "Vero 4 o Falso 4",
-      "Vero 5 o Falso 5", "Domanda Nascosta" };
-  String[] difficile = { "1", "2", "3", "4", "5", "6" };
+  String[] intermedio = {
+      "Il polimorfismo consente di avere funzioni con lo stesso nome ma con diversi insiemi di parametri?",
+      "Nel linguaggio Java, l'override è un meccanismo che consente a una sottoclasse di fornire la propria\nimplementazione di un metodo ereditato dalla classe genitore, sostituendone l'implementazione predefinita?",
+      "Nel polimorfismo, un oggetto può essere trattato come un'istanza di una classe derivata", "Vero 4 o Falso 4",
+      "Qual è uno degli aspetti chiave del polimorfismo nei linguaggi di programmazione orientati agli oggetti?\n1)La capacità di un oggetto di cambiare di tipo durante l'esecuzione del programma.\n2)La capacità di un oggetto di essere istanziato come un'istanza di una classe astratta\n3)La capacità di un metodo di essere implementato in modo diverso dalle classi derivate.\n4)La capacità di una classe di ereditare i membri privati di una classe padre",
+      "Domanda Nascosta!" };
+  String[] difficile = {
+      "Il polimorfismo permette agli oggetti di una classe derivata di essere trattati come oggetti della classe base",
+      "Nel polimorfismo, un metodo può avere più implementazioni diverse nelle classi derivate",
+      "Nel polimorfismo, un metodo può avere più implementazioni diverse nelle classi derivate ",
+      "Quale dei seguenti NON è un tipo di polimorfismo:\n1)Polimorfismo Statico\n2)Polimorfismo dinamico\n3)Polimorfismo ereditario\n4)Polimorfismo parametrico",
+      "Qual è il termine utilizzato per riferirsi al polimorfiso che si verifica durante la compilazione del programma?\n1)Early binding\n2)Late Binding\n3)Statico\n4)Dinamico",
+      "Domanda Nascosta!" };
 
   public void modFacile() {
 
@@ -106,50 +115,50 @@ public class LevelThree {
     System.out.println("Rispondi VERO oppure FALSO");
     String intermedioAnswer = sc.nextLine();
     if (intermedioAnswer.equalsIgnoreCase("vero") || intermedioAnswer.equalsIgnoreCase("v")) {
-      System.out.println("----------\nBravo, la risposta era VERA\n----------");
+      System.out.println("----------\nBravo, la risposta era VERO! +1 punto!\n----------");
       counter++;
     } else {
-      System.out.println("----------\nRisposta SBAGLIATA!!!!\n----------");
+      System.out.println("----------\nRisposta SBAGLIATA!!!! Non hai guadagnato nessun punto!\n----------");
     }
-    // Domanda 2 FALSO
+    // Domanda 2 VERO
     System.out.println("2)" + intermedio[1]);
     System.out.println("Rispondi VERO oppure FALSO");
     intermedioAnswer = sc.nextLine();
-    if (intermedioAnswer.equalsIgnoreCase("falso") || intermedioAnswer.equalsIgnoreCase("f")) {
-      System.out.println("----------\nBravo, la risposta era FALSO\n----------");
+    if (intermedioAnswer.equalsIgnoreCase("vero") || intermedioAnswer.equalsIgnoreCase("v")) {
+      System.out.println("----------\nBravo, la risposta era VERO! +1 punto!\n----------");
       counter++;
     } else {
-      System.out.println("----------\nRisposta SBAGLIATA!!!!\n----------");
+      System.out.println("----------\nRisposta SBAGLIATA!!!! Non hai guadagnato nessun punto!\n----------");
     }
-    // Domanda 3 FALSO
+    // Domanda 3 VERO
     System.out.println("3)" + intermedio[2]);
     System.out.println("Rispondi VERO oppure FALSO");
     intermedioAnswer = sc.nextLine();
-    if (intermedioAnswer.equalsIgnoreCase("falso") || intermedioAnswer.equalsIgnoreCase("f")) {
-      System.out.println("----------\nBravo, la risposta era FALSO\n----------");
+    if (intermedioAnswer.equalsIgnoreCase("vero") || intermedioAnswer.equalsIgnoreCase("v")) {
+      System.out.println("----------\nBravo, la risposta era VERO! +1 punto!!!\n----------");
       counter++;
     } else {
-      System.out.println("----------\nRisposta SBAGLIATA!!!!\n----------");
+      System.out.println("----------\nRisposta SBAGLIATA!!!! Non hai guadagnato nessun punto!\n----------");
     }
     // Domanda 4 VERO
     System.out.println("4)" + intermedio[3]);
     System.out.println("Rispondi VERO oppure FALSO");
     intermedioAnswer = sc.nextLine();
     if (intermedioAnswer.equalsIgnoreCase("vero")) {
-      System.out.println("----------\nBravo, la risposta era VERO\n----------");
+      System.out.println("----------\nBravo, la risposta era VERO! +1 punto!!!\n----------");
       counter++;
     } else {
-      System.out.println("----------\nRisposta SBAGLIATA!!!!\n----------");
+      System.out.println("----------\nRisposta SBAGLIATA!!!! Non hai guadagnato nessun punto!\n----------");
     }
     // Domanda 5 FALSO
     System.out.println("5)" + intermedio[4]);
-    System.out.println("----------\nRispondi VERO oppure FALSO\n----------");
+    System.out.println("----------\nRispondi scrivendo il numero della risposta\n----------");
     intermedioAnswer = sc.nextLine();
-    if (intermedioAnswer.equalsIgnoreCase("falso")) {
-      System.out.println("----------\nBravo, la risposta era FALSO\n----------");
+    if (intermedioAnswer.equals("1")) {
+      System.out.println("----------\nBravo, la risposta era la numero 1!!! +1 punto!!!\n----------");
       counter++;
     } else {
-      System.out.println("----------\nRisposta SBAGLIATA!!!!\n----------");
+      System.out.println("----------\nRisposta SBAGLIATA!!!! Non hai guadagnato nessun punto!\n----------");
     }
     // Domanda 6
     if (counter == 0) {
@@ -175,7 +184,7 @@ public class LevelThree {
     }
     System.out.println(difficile[1] + "rispondi con si o no");
     String risposta2 = myScan.nextLine();
-    if (risposta2.equalsIgnoreCase("no")) {
+    if (risposta2.equalsIgnoreCase("si")) {
       System.out.println("bravo,la risposta è vera");
       counterPunti++;
     } else {
@@ -189,18 +198,18 @@ public class LevelThree {
     } else {
       System.out.println("risposta sbagliata");
     }
-    System.out.println(difficile[3] + "rispondi con si o no");
+    System.out.println(difficile[3] + "rispondi scegliendo un numero");
     String risposta4 = myScan.nextLine();
-    if (risposta4.equalsIgnoreCase("si")) {
-      System.out.println("bravo,la risposta è vera");
+    if (risposta4.equalsIgnoreCase("3")) {
+      System.out.println("bravo,la risposta è la numero 3!!!");
       counterPunti++;
     } else {
       System.out.println("risposta sbagliata");
     }
-    System.out.println(difficile[4] + "metti la risposta corretta");
+    System.out.println(difficile[4] + "rispondi scegliendo un numero");
     String risposta5 = myScan.nextLine();
-    if (risposta5.equals("2")) {
-      System.out.println("bravo,la risposta è giusta");
+    if (risposta5.equals("1")) {
+      System.out.println("bravo,la risposta è la numero 1!!!");
       counterPunti++;
     } else {
       System.out.println("risposta sbagliata");
@@ -212,7 +221,6 @@ public class LevelThree {
     } else {
       System.out.println("Hai finito complimenti, i tuoi punti sono: " + counterPunti);
     }
-
   }
 
 }
